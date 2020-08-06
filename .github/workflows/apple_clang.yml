@@ -4,7 +4,15 @@
 
 name: Apple Clang
 
-on: [push, pull_request]
+on: 
+  push:
+    paths-ignore: 
+      - '**.md'
+      - 'doc/**'
+  pull_request:
+    paths-ignore: 
+      - '**.md'
+      - 'doc/**'
 
 jobs:
   build:
