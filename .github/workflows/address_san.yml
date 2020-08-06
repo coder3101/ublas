@@ -5,7 +5,15 @@
 name: Address Sanitizer 
 # Trigger on Push to the repository, regardless of the branch.
 # For fine tune, You can add specific branches or tags.
-on: [push, pull_request]
+on: 
+  push:
+    paths-ignore: 
+      - '**.md'
+      - 'doc/**'
+  pull_request:
+    paths-ignore: 
+      - '**.md'
+      - 'doc/**'
 
 jobs:
   build:
